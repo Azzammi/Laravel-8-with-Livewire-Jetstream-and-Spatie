@@ -2,21 +2,34 @@
 
 Using Laravel Jetstream, Spatie, and Livewire
 
-The tutorial [here](https://hdtuto.com/article/laravel-8-spatie-roles-and-permissions-tutorial) (for spatie)
-The tutorial [here](https://daengweb.id/membuat-crud-laravel-8-jetstream-livewire) (for jetstream and livewire)
+The tutorial [here](https://blog.pusher.com/laravel-jwt/) 
 
-To deliver you app on a server, you have to (on you dev environement) :
+## Setup
+When you are done with installation, copy the .env.example file to .env
+```
+$ cp .env.example .env
+```
 
-  * Git clone the tag/branch that you want to deliver
-  * Launch the command `composer install`
-  * Rename `env.example` to `env`
-  * Adjust di env file
-  * run `php artisan key:generate`
-  * run `php artisan migrate:fresh --seed
-  * and just run `php artisan serve`
+Generate the application key
+```
+$ php artisan key:generate
+```
 
-Login :
-`email = admin@gmail.com`
-`password = 123456`
+Generate JWT secret
+```
+php artisan jwt:secret
+```
+
+Migrate the application
+```
+php artisan migrate
+``` 
+
+Run the application
+```
+php artisan serve
+```
+
+
 
 That's all, you have a beautifull package that can be deliver on a server 
